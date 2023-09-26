@@ -1,0 +1,32 @@
+{
+  "name": "piral-ng-common",
+  "version": "16.0.0",
+  "description": "Common module for piral-ng.",
+  "keywords": [],
+  "author": "smapiot",
+  "main": "piral-ng-common.js",
+  "homepage": "https://piral.io",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smapiot/piral.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smapiot/piral/issues"
+  },
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json",
+    "copy": "cp src/index.d.ts dist/ && cp src/piral-ng-common.js dist/"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^16",
+    "@angular/compiler-cli": "^16",
+    "@angular/common": "^16",
+    "@angular/core": "^16",
+    "ng-packagr": "^16",
+    "piral-core": "^1.2.0",
+    "typescript": "~5.0.0"
+  },
+  "peerDependencies": {},
+  "dependencies": {}
+}

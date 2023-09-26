@@ -1,0 +1,28 @@
+name: Publish Packages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build_app:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install Dependencies
+        run: |
+          ./install-all.sh
+      - name: Build Packages
+        run: |
+          ./build-all.sh
+      - name: Publish Packages
+        run: |
+          ./publish-all.sh
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
