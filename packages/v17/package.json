@@ -25,6 +25,7 @@
     "@angular/core": "^17",
     "ng-packagr": "^17",
     "piral-core": "^1.2.0",
+    "rollup": "^4.5.0",
     "typescript": "~5.2.0"
   },
   "peerDependencies": {},
